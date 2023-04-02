@@ -24,15 +24,22 @@ export const counterSlice = createSlice({
             )
         }
         state.items = new_items;
-
     },
-    
-   
+
+    removeAll: (state,action) => {
+        const removed_items = state.items.filter((item) => item.id !== action.payload.id);
+        state.items = removed_items;
+    },
+
+    addQty: (state,action) => {
+      const data = state.items.find((item) => item.id === action.payload.id);
+      state.items = [...state.items, data];
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { add, remove } = counterSlice.actions
+export const { add, remove,removeAll,addQty } = counterSlice.actions
 
 export const selectItems = (state) => state.counter.items;
 

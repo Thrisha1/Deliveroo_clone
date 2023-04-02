@@ -41,7 +41,7 @@ const Basket = () => {
                 <Ionicons name="cart-outline" size={24} color="white" ></Ionicons>
             </View>
          </View>   
-      </TouchableOpacity>+
+      </TouchableOpacity>
     </View>
   )
 }

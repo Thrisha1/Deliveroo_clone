@@ -9,6 +9,7 @@ const initialState = {
     address:null,
     dishes:null,
   },
+  Group:{},
 }
 
 export const basketSlice = createSlice({
@@ -18,14 +19,19 @@ export const basketSlice = createSlice({
     setRestaurant : (state, action) => {
       state.restaurant = action.payload
     },
-  //   removeBasket : (state, action) => {
-  //     const new_items = state.restaurant.filter(basket => basket.id !== action.payload.id)
-  //     state.restaurant = new_items
-  // },
+
+    addToGroup : (state, action) => {
+      state.Group = action.payload
+      console.log(state.Group)
+    },
+
+    removeAll : (state, action) => {
+      console.log(action.payload.id);
+    },
 }})
 
 // Action creators are generated for each case reducer function
-export const {setRestaurant,removeBasket} = basketSlice.actions
+export const {setRestaurant,removeAll,addToGroup} = basketSlice.actions
 
 export const selectRestaurant = (state) => state.restaurant.restaurant;
 

@@ -65,7 +65,7 @@ const RestaurantScreen = () => {
             <Ionicons name="arrow-back-outline" size={32} color="#111"  />
          </TouchableOpacity>
          <View className=" bg-white p-3" >
-            <Text className="text-2xl font-black tracking-widest ">{title}</Text>
+            <Text className="text-2xl font-medium tracking-widest ">{title}</Text>
             <View className="flex-row mt-2">
               <Ionicons name="star" size={20} opacity={0.5} color="green"  />
               <Text className="text-lg ml-1 font-medium text-green-6  00">{rating}</Text>
@@ -81,14 +81,14 @@ const RestaurantScreen = () => {
          <TouchableOpacity className="bg-white mt-[1] p-3" >
             <View className="flex-row mt-4 items-center">
               <Ionicons name="call" size={20} opacity={0.5} color="green"  /> 
-              <Text className="text-xl font-black tracking-widest mx-3 ">Have a Food Allergy?</Text>
+              <Text className="text-xl font-medium tracking-widest mx-3 ">Have a Food Allergy?</Text>
                 <View className="flex-row ml-24">
                   <Ionicons name="chevron-forward-outline" size={24} opacity={0.5} color="green"  />
                 </View>
              </View> 
          </TouchableOpacity>
          <View className="p-3 justify-center">
-            <Text className="text-2xl font-black tracking-widest ">Menu</Text>
+            <Text className="text-2xl font-medium tracking-widest ">Menu</Text>
          </View>
           {/* dishes */}
           {
