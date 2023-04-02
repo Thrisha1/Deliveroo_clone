@@ -48,7 +48,7 @@ const DishRow = ( {id,image,name,price,description}) => {
     <View className="relative">
         <View className="p-3 flex-row bg-white relative">
             <View className="w-8/12">
-                <Text className="text-xl font-black tracking-widest ">{name}</Text>
+                <Text className="text-xl font-medium tracking-widest ">{name}</Text>
                 <Text className="text-gray-500 pt-2">{description}</Text>
                 <View className="flex-row items-center">
                     <Ionicons name="logo-usd" size={19} opacity={0.5} color="black"></Ionicons>
