@@ -16,16 +16,20 @@ export const basketSlice = createSlice({
   initialState,
   reducers: {
     setRestaurant : (state, action) => {
-      state.restaurant = action.payload
+      state.restaurant = action.payload.id
     },
-  //   removeBasket : (state, action) => {
-  //     const new_items = state.restaurant.filter(basket => basket.id !== action.payload.id)
-  //     state.restaurant = new_items
-  // },
+    removeall : (state, action) => {
+      // const new_items = state.restaurant.reduce( function (acc, item) {
+      //   if (item.id !== action.payload.id) {
+      //     acc.push(item)
+      //   }})
+      // state.restaurant = new_items
+      console.log(state.restaurant);
+  },
 }})
 
 // Action creators are generated for each case reducer function
-export const {setRestaurant,removeBasket} = basketSlice.actions
+export const {setRestaurant,removeall} = basketSlice.actions
 
 export const selectRestaurant = (state) => state.restaurant.restaurant;
 

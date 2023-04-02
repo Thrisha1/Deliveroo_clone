@@ -12,7 +12,7 @@ import {
 import React, {useMemo, useState, useEffect,useLayoutEffect} from "react";
 import {useRoute,useNavigation} from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
-import {selectRestaurant } from '../features/basketSlice'
+import {selectRestaurant,removeall } from '../features/basketSlice'
 import { selctItems,remove } from '../features/counterSlice';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { urlFor } from '../sanity'
@@ -41,7 +41,7 @@ const BasketScreen = () => {
     setGroupItems(groupedItems)
 
   }, [items]);
-  console.log(GroupItems);
+  // console.log(GroupItems);
 
 
   return (
@@ -87,7 +87,7 @@ const BasketScreen = () => {
                     <Text className="text-lg font-medium text-green-6 ">{item[0].price}</Text>
                   </View>
                   <TouchableOpacity className="self-end">
-                      <Text className="self-end text-red-600 border border-red-500 rounded-full  px-3 text-lg" onPress={()=>dispatch(remove({id:key}))} >Remove</Text>
+                      <Text className="self-end text-red-600 border border-red-500 rounded-full  px-3 text-lg" onPress={()=>dispatch(removeall({id:key}))} >Remove</Text>
                   </TouchableOpacity>
                   </View>
               </View>
