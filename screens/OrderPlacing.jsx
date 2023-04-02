@@ -10,10 +10,19 @@ import {
 
 } from "react-native";
 import React, { useMemo, useState, useEffect, useLayoutEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import Delivery from "./Delivery";
 
 import * as Animatable from "react-native-animatable";
 
 const OrderPlacing = () => {
+    const navigation = useNavigation();
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("Delivery")
+        }, 1000)
+    }, [])
+    
     return (
         <SafeAreaView className="pt-10 flex-1 bg-[#5da6b0] items-center justify-center ">
             <Animatable.Image 

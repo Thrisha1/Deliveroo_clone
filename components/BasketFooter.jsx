@@ -24,17 +24,17 @@ import {
 
     return (
       <View className=" bg-white p-4 ">
-        <View className="flex-row justify-between my-2">
-            <Text>Subtotal</Text>
-            <Text>${total}</Text>
+        <View className="flex-row justify-between my-2 ">
+            <Text className="text-lg">Subtotal</Text>
+            <Text className="text-lg">${total}</Text>
         </View>
         <View className="flex-row justify-between">
-            <Text>Delivery Fee</Text>
-            <Text>$ {total*0.1}</Text>
+            <Text className="text-lg">Delivery Fee</Text>
+            <Text className="text-lg">$ {total*0.1}</Text>
         </View>
         <View className="flex-row justify-between my-2">
-            <Text className="font-medium">Order Total</Text>
-            <Text className="font-medium">$ {(total)+(total*0.1)}</Text>
+            <Text className="font-bold text-lg">Order Total</Text>
+            <Text className="font-bold text-lg">$ {(total)+(total*0.1)}</Text>
         </View>
         <View>
             <TouchableOpacity onPress={() => navigation.navigate("OrderPlacing")} className="bg-[#5da6b0] rounded-xl py-3 my-2">

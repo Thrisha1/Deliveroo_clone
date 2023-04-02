@@ -9,6 +9,7 @@ import store from './store'
 import { Provider } from 'react-redux'
 import DummyScreen from './screens/DummyScreen.jsx'
 import OrderPlacing from './screens/OrderPlacing.jsx'
+import Delivery from './screens/Delivery.jsx'
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
                 <Stack.Screen name="Basket"component={BasketScreen}/>
                 <Stack.Screen name="Dummy"component={DummyScreen}/>
                 <Stack.Screen name="OrderPlacing"component={OrderPlacing} options={{ presentation:"fullScreenModal",headerShown:false }}/>
+                <Stack.Screen name="Delivery"component={Delivery} options={{ presentation:"fullScreenModal",headerShown:false }}/>
             </Stack.Navigator>
             </Provider>
         </NavigationContainer>
